@@ -1,23 +1,23 @@
 from optparse import OptionParser
 from genpasswd import generate
 
-__version__ = '2.0.0'
+__version__ = '2.0.1'
 
 
 def main():
     usage = "Usage: %prog [options]"
     parser = OptionParser(usage=usage)
-    parser.add_option('-c', '--count', dest='length', default=3, action='store', type='int',
+    parser.add_option('-c', '--count', dest='length', default=3, action='store', type='int', metavar="SETS",
                       help='the count of the strings between separators')
-    parser.add_option('-l', '--str-length', dest='set_length', default=6, action='store', type='int',
+    parser.add_option('-l', '--str-length', dest='set_length', default=6, action='store', type='int', metavar="LENGTH",
                       help='the length of characters between separators')
-    parser.add_option('-d', '--digits', dest='numbers', default=1, action='store', type='int',
+    parser.add_option('-d', '--digits', dest='numbers', default=1, action='store', type='int', metavar="NUMS",
                       help='the amount of digits in the password')
-    parser.add_option('-u', '--uppercase', dest='uppercase', default=1, action='store', type='int',
+    parser.add_option('-u', '--uppercase', dest='uppercase', default=1, action='store', type='int', metavar="CAPS",
                       help='the amount of uppercase letters in the password')
-    parser.add_option('-s', '--separator', dest='separator', default='-', action='store',
+    parser.add_option('-s', '--separator', dest='separator', default='-', action='store', metavar="CHAR",
                       help='the separator character')
-    parser.add_option('-n', '--number', dest='iterations', default=1, action='store', type='int',
+    parser.add_option('-n', '--number', dest='iterations', default=1, action='store', type='int', metavar="ITER",
                       help='executes the command N times')
     parser.add_option('-v', '--version', default=False,
                       dest='version', action='store_true',
