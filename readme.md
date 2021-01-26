@@ -13,17 +13,17 @@ Usage: genpasswd [options]
 
 Options:
   -h, --help            show this help message and exit
-  -c LENGTH, --count=LENGTH
+  -c SETS, --count=SETS
                         the count of the strings between separators
-  -l SET_LENGTH, --str-length=SET_LENGTH
+  -l LENGTH, --str-length=LENGTH
                         the length of characters between separators
-  -d NUMBERS, --digits=NUMBERS
+  -d NUMS, --digits=NUMS
                         the amount of digits in the password
-  -u UPPERCASE, --uppercase=UPPERCASE
+  -u CAPS, --uppercase=CAPS
                         the amount of uppercase letters in the password
-  -s SEPARATOR, --separator=SEPARATOR
+  -s CHAR, --separator=CHAR
                         the separator character
-  -n ITERATIONS, --number=ITERATIONS
+  -n ITER, --number=ITER
                         executes the command N times
   -v, --version         print the version number and quit
 ```
