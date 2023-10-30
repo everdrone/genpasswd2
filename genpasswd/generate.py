@@ -1,10 +1,10 @@
 import string
-import random
+import secrets
 from textwrap import wrap
 
 
 def charset(length: int = 6) -> str:
-    return ''.join(random.choices(string.ascii_lowercase, k=length))
+    return ''.join(secrets.choices(string.ascii_lowercase, k=length))
 
 
 def superset(
@@ -28,7 +28,7 @@ def superset(
     for _ in range(uppercase):
         pick_again = True
         while pick_again:
-            index = random.randrange(len(all))
+            index = secrets.randrange(len(all))
             if all[index].isalpha() and all[index].islower():
                 pick_again = False
 
@@ -40,12 +40,12 @@ def superset(
     for _ in range(numbers):
         pick_again = True
         while pick_again:
-            index = random.randrange(len(all))
+            index = secrets.randrange(len(all))
             if all[index].isalpha() and all[index].islower():
                 pick_again = False
 
         all = list(all)
-        all[index] = random.choice(string.digits)
+        all[index] = secrets.choice(string.digits)
         all = ''.join(all)
 
     # split and join with separators
