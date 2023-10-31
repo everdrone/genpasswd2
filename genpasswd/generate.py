@@ -4,7 +4,7 @@ from textwrap import wrap
 
 
 def charset(length: int = 6) -> str:
-    return ''.join(secrets.choices(string.ascii_lowercase, k=length))
+    return ''.join([secrets.choice(string.ascii_lowercase) for _ in range(length)])
 
 
 def superset(
@@ -28,7 +28,7 @@ def superset(
     for _ in range(uppercase):
         pick_again = True
         while pick_again:
-            index = secrets.randrange(len(all))
+            index = secrets.randbelow(len(all))
             if all[index].isalpha() and all[index].islower():
                 pick_again = False
 
@@ -40,7 +40,7 @@ def superset(
     for _ in range(numbers):
         pick_again = True
         while pick_again:
-            index = secrets.randrange(len(all))
+            index = secrets.randbelow(len(all))
             if all[index].isalpha() and all[index].islower():
                 pick_again = False
 
