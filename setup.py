@@ -2,7 +2,7 @@ import setuptools
 
 setuptools.setup(
     name="genpasswd-everdrone",
-    version="2.0.2",
+    version="2.0.3",
     author="Giorgio Tropiano",
     author_email="giorgiotropiano@gmail.com",
     description="Password Generator",
